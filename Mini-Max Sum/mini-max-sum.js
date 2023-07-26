@@ -10,12 +10,16 @@ function miniMaxSum(arr) {
 
   // Min
   arr.splice(arr.indexOf(Math.max(...arr)), 1);
+  // Also a solution for this > arr.reverse().splice(0,1)
+  // Remove the first elem in a descending array
   const minSum = arr.reduce((acc, value) => {
     return acc + value;
   }, 0);
 
   // Max
   maxArr.splice(maxArr.indexOf(Math.min(...maxArr)), 1);
+  // Also a solution for this > arr.sort().splice(0,1)
+  // Remove the first elem in a ascending array
   const maxSum = maxArr.reduce((acc, value) => {
     return acc + value;
   }, 0);
