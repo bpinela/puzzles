@@ -7,5 +7,20 @@
  */
 
 function gradingStudents(grades) {
-  // Write your code here
+  const response = grades.map((grade) => {
+    const ceil = Math.ceil(grade / 5) * 5;
+    const gradeDiff = ceil - grade;
+
+    if (grade < 38 || gradeDiff >= 3) {
+      return grade;
+    }
+
+    return ceil;
+  });
+
+  console.log(response);
+  return response;
 }
+
+// ==== TESTS ====
+gradingStudents([73, 67, 38, 33]); //[75, 67, 40, 33]
