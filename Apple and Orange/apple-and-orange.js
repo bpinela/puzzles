@@ -1,3 +1,4 @@
+"use strict";
 /*
  * Complete the 'countApplesAndOranges' function below.
  *
